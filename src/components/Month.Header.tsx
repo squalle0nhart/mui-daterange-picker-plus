@@ -7,7 +7,7 @@ import {
   Select,
   useTheme,
   Typography,
-  Unstable_Grid2 as Grid2,
+  Grid as Grid2,
 } from "@mui/material";
 import type { SelectChangeEvent } from "@mui/material";
 import {
@@ -167,7 +167,7 @@ export const MonthHeader = ({
         </IconButton>
       </Grid2>
 
-      <Grid2 xsOffset={"auto"} xs={"auto"} container>
+      <Grid2 xs={"auto"} container>
         <FormControl>
           <Select
             SelectDisplayProps={{
@@ -200,7 +200,6 @@ export const MonthHeader = ({
               },
             }}
             MenuProps={{
-              disablePortal: true,
               PaperProps: {
                 sx: {
                   width: "auto",
@@ -231,7 +230,7 @@ export const MonthHeader = ({
         </FormControl>
       </Grid2>
 
-      <Grid2 xsOffset={"auto"} xs="auto" container>
+      <Grid2 xs="auto" container>
         <FormControl>
           <Select
             variant="outlined"
@@ -260,7 +259,6 @@ export const MonthHeader = ({
               },
             }}
             MenuProps={{
-              disablePortal: true,
               PaperProps: {
                 sx: {
                   width: "auto",
@@ -274,16 +272,6 @@ export const MonthHeader = ({
             onChange={handleYearChange}
           >
             {generateYears(availableYearRange).map((year) => {
-              // let disabled = false;
-              //
-              // if (marker !== MARKERS.SINGLE_MONTH) {
-              //   if (isFirstYear && year > otherYear) {
-              //     disabled = true;
-              //   } else if (!isFirstYear && year < otherYear) {
-              //     disabled = true;
-              //   }
-              // }
-
               return (
                 <MenuItem key={year} value={year}>
                   <Typography
@@ -300,7 +288,7 @@ export const MonthHeader = ({
         </FormControl>
       </Grid2>
 
-      <Grid2 mr="10px" xsOffset={"auto"} xs="auto" container>
+      <Grid2 mr="10px" xs="auto" container>
         <IconButton
           disableRipple
           size="small"

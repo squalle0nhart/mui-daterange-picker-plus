@@ -6,7 +6,7 @@ import {
   Typography,
   alpha,
   useTheme,
-  Unstable_Grid2 as Grid2,
+  Grid as Grid2,
 } from "@mui/material";
 import type { SelectChangeEvent, SvgIconProps } from "@mui/material";
 import { differenceInCalendarMonths } from "date-fns";
@@ -225,7 +225,6 @@ export const Sections = (props: SectionsProps) => {
                   },
                 }}
                 MenuProps={{
-                  disablePortal: true,
                   PaperProps: {
                     sx: {
                       width: "auto",
